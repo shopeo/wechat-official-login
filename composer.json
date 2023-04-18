@@ -1,0 +1,16 @@
+{
+    "name": "shopeo/wechat-official-login",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shopeo\\WechatOfficialLogin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shopeo"
+        }
+    ],
+    "minimum-stability": "dev"
+}

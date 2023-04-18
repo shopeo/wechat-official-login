@@ -13,6 +13,9 @@
  * Requires PHP: 5.6
  */
 
+
+require_once 'vendor/autoload.php';
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -56,5 +59,16 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'shopeo-wechat-official-login-frontend-script', plugins_url( '/assets/js/frontend.js', WECHAT_OFFICIAL_LOGIN_FILE ), array(), '0.0.1', true );
 	wp_localize_script( 'shopeo-wechat-official-login-frontend-script', 'shopeo_custom_card_frontend', array(
 		'ajax_url' => admin_url( 'admin-ajax.php' )
+	) );
+} );
+
+function shopeo_wechat_official_event( $request ) {
+
+}
+
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'shopeo-wechat-official/v1', '/event', array(
+		'methods'  => WP_REST_Server::CREATABLE,
+		'callback' => 'shopeo_wechat_official_event'
 	) );
 } );
