@@ -10,7 +10,7 @@
  * Text Domain: shopeo-wechat-official-login
  * Domain Path: /languages
  * Requires at least: 5.9
- * Requires PHP: 5.6
+ * Requires PHP: 8.0.2
  */
 
 

@@ -12,5 +12,8 @@
             "name": "shopeo"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "w7corp/easywechat": "6.x-dev"
+    }
 }
